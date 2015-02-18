@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { omniauth_callbacks: 'users/omniauth_callbacks' }
   resources :campaigns
 
-  get "complete_profile", to: 'complete_profiles#index'
-  patch "complete_profile", to: 'complete_profiles#save'
+  get "complete_profile", to: 'complete_profile#index'
+  patch "complete_profile", to: 'complete_profile#save'
   root 'campaigns#index'
 
 

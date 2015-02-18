@@ -47,7 +47,7 @@ class UserProvider < ActiveRecord::Base
                    registered_user
               else
                 user = User.create!(
-                        email: "",
+                       email: "#{auth.info.nickname}@email.com",
                         username: auth.info.nickname,                      
                           password: Devise.friendly_token[0,20],
                           )

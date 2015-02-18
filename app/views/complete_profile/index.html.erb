@@ -1,0 +1,9 @@
+aqui estoy
+
+<%= @user.inspect %>
+
+
+<%= form_for(@user, url: {action: :save}, method: :patch) do |f|%>
+	<%= f.text_field :email%>
+	<%= f.submit %>
+<% end %>
