@@ -42,7 +42,14 @@ class UserProvider < ActiveRecord::Base
                         UserProvider.create!(
                               provider: auth.provider,
                               uid: auth.uid,
-                              user_id: registered_user.id
+                              user_id: registered_user.id,
+                          username: auth.info.nickname,
+                          reach_in: auth.followers_count,
+                          reach_out: auth.friends_count,
+                          likes: auth.favourites_count,
+                          token: auth.credentials.token,
+                           secret: auth.credentials.secret,
+                            
                               )
                    registered_user
               else
@@ -50,12 +57,22 @@ class UserProvider < ActiveRecord::Base
                        email: "#{auth.info.nickname}@email.com",
                         username: auth.info.nickname,                      
                           password: Devise.friendly_token[0,20],
+                          name: auth.info.name,
+                          photo_url: auth.info.image,
                           )
 
                     user_provider = UserProvider.create!(
                         provider:auth.provider,
                           uid:auth.uid,
-                          user_id: user.id
+                          user_id: user.id,
+                          username: auth.info.nickname,
+                          reach_in: auth.followers_count,
+                          reach_out: auth.friends_count,
+                          likes: auth.favourites_count,
+                          token: auth.credentials.token,
+                           secret: auth.credentials.secret,
+                         
+                         
                         )
                     user
               end

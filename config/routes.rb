@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get "complete_profile", to: 'complete_profile#index'
   patch "complete_profile", to: 'complete_profile#save'
-  root 'campaigns#index'
+  get '/', to: 'default#index'
 
 
   

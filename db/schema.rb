@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150215203843) do
+ActiveRecord::Schema.define(version: 20150219024745) do
 
   create_table "campaigns", force: :cascade do |t|
     t.integer  "Campaign_id"
@@ -29,6 +29,15 @@ ActiveRecord::Schema.define(version: 20150215203843) do
     t.integer "user_id"
     t.string  "provider"
     t.string  "uid"
+    t.string  "token"
+    t.string  "secret"
+    t.string  "provider_url"
+    t.string  "username"
+    t.integer "reach_in"
+    t.integer "reach_out"
+    t.integer "likes"
+    t.integer "shares"
+    t.integer "comments"
   end
 
   add_index "user_providers", ["user_id"], name: "index_user_providers_on_user_id"
@@ -46,9 +55,12 @@ ActiveRecord::Schema.define(version: 20150215203843) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "provider"
-    t.string   "uid"
     t.string   "username"
+    t.string   "name"
+    t.boolean  "is_foundation"
+    t.string   "photo_url"
+    t.string   "description"
+    t.string   "categories"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

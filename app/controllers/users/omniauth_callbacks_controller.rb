@@ -26,7 +26,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
 
     def after_sign_in_path_for(resource)
-      if resource.is_a?(User)
+      if resource.is_a?(User) && resource.email == "#{resource.username}@email.com"
         complete_profile_path
       else
         super
