@@ -13,7 +13,6 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     def twitter
         auth = env["omniauth.auth"]
-        puts auth
         @user = UserProvider.find_for_twitter_oauth(request.env["omniauth.auth"])
         flash[:notice] = "Signed in with TTTwitter successfully."
         if @user.persisted?         
@@ -26,7 +25,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
 
     def after_sign_in_path_for(resource)
-      if resource.is_a?(User) && resource.email == "#{resource.username}@email.com"
+      if resource.is_a?(User) and !resource.profile_completed?
         complete_profile_path
       else
         super

@@ -3,12 +3,22 @@ Rails.application.routes.draw do
   # devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks"}
   #devise_for :users, class_name: 'FormUser', controllers: { :omniauth_callbacks => "users/omniauth_callbacks"}
   devise_for :users, :controllers => { omniauth_callbacks: 'users/omniauth_callbacks' }
+devise_scope :user do
+  get 'sign_up_foundation', to: 'devise/registrations#new'
+end
+
   resources :campaigns
 
+  #get "select_campaigns", to: 'complete_profile#select_campaigns'
   get "complete_profile", to: 'complete_profile#index'
   patch "complete_profile", to: 'complete_profile#save'
-  get '/', to: 'default#index'
+  get '/', to: 'defaults#index'
+  
 
+
+
+  match '/contacts',     to: 'contacts#new',             via: 'get'
+  resources "contacts", only: [:new, :create]
 
   
 

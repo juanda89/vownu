@@ -6,10 +6,12 @@ class CompleteProfileController < ApplicationController
 
 	def save
 		@user = current_user
-		if @user.update(params.require(:user).permit(:email))
-			redirect_to complete_profile_path
+		if @user.update(params.require(:user).permit(:email, :name))
+			@user.update_attribute(:profile_completed?, true)
+			flash[:notice] = "Post successfully created"
+			redirect_to '/'
 		else
-			render 'index'
+			redirect_to complete_profile_path
 		end
 	end
 

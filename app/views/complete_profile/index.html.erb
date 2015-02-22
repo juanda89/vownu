@@ -1,8 +1,29 @@
+<div class="navbar-fixed-top">
 
-<%=  @user.inspect%>
+<%= render "/shared/navbar" %> 
 
-<%= form_for(@user, url: {action: :save}, method: :patch) do |f|%>
-	<%= f.label :email%>
-	<%= f.text_field :email, :value => ""%>
-	<%= f.submit "Actualizar correo" %>
-<% end %>
+</div>
+
+
+<div class="container">
+	<div class="login-container">
+            <div id="output"></div>
+            <div class="avatar"><img src=<%="#{@user.photo_url}"%> style="width:100%"></div>
+            <div class="form-box">
+            	<%= form_for(@user, url: {action: :save}, method: :patch) do |f|%>
+            	<%= f.label "Correo electrónico"%>
+            	<% corr = ""%>
+            	<% corr = @user.email if @user.email != "#{@user.username}@email.com"%>
+                 
+            	<%= f.text_field :email, :value => corr, placeholder: "vownu@email.com"%>
+            	<%= f.label "Nombre Completo"%>
+            	<%= f.text_field :name, :value => "#{@user.name}", placeholder: "Pepito Paez"%>
+
+
+            	<%= f.submit "Actualizar Datos", class:"btn login", id:"actualizar_datos" %>
+            	<% end %>
+                   
+            </div>
+        </div>
+        
+</div>

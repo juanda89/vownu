@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 		:omniauthable, :omniauth_providers => [:twitter, :facebook]
 	
 	has_many :user_provider, :dependent => :destroy
+	has_many :user
 
 
 #def self.from_omniauth(auth)
