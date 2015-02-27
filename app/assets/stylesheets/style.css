@@ -264,3 +264,15 @@ html,body{
     margin-top:10%;
     padding: 10px 20px;
 }
+
+.btn span.glyphicon {               
+    opacity: 0;             
+}
+.btn.active span.glyphicon {                
+    opacity: 1;             
+}
+
+.check_para_fundaciones{
+    list-style-type: none;
+    margin: 10%;
+}

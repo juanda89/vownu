@@ -1,7 +1,8 @@
 class CompleteProfileController < ApplicationController
 
 	def index
-		@user = current_user	
+		@user = current_user
+		@foundations = User.where(is_foundation: true)	
 	end
 
 	def save
