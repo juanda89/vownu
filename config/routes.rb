@@ -13,6 +13,7 @@ end
   get "complete_profile", to: 'complete_profile#index'
   patch "complete_profile", to: 'complete_profile#save'
   get '/', to: 'defaults#index'
+  get '/prueba', to: 'defaults#prueba'
   
 
 
