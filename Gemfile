@@ -47,7 +47,7 @@ gem 'bootstrap-sass'
 gem 'mail_form'
 gem 'simple_form'
 gem 'dotenv-rails', :groups => [:development, :test]
-
+gem 'bootstrap-sass', '~> 3.3.3'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -57,6 +57,5 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'foreman'  
-
 end
 
