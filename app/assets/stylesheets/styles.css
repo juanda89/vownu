@@ -181,9 +181,10 @@ pre code {
 }
 /* ======= Promo Section ======= */
 .promo {
-  background: #17baef;
+  /*background: #17baef;*/
+  background-image: url(http://s6.postimg.org/63zf2nzqp/fondogeneral.jpg);
   color: #fff;
-  padding-top: 150px;
+  padding-top: 490px;
 }
 .promo .title {
   font-size: 98px;
