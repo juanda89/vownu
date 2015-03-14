@@ -1,3 +1,4 @@
+<!--Vista de la aplicacion, los cambios hechos aquí apareceran siempre a menos que se haga una excepcion-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,12 +39,12 @@
                 </div><!--//navbar-header-->            
                 <div class="navbar-collapse collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active nav-item sr-only"><a class="scrollto" href="#promo">Home</a></li>
-                        <li class="nav-item"><a class="scrollto" href="#about">Fundaciones</a></li>
-                        <li class="nav-item"><a class="scrollto" href="#features">Donantes</a></li>
-                        <li class="nav-item"><a class="scrollto" href="#docs">Nosotros</a></li>
-                        <li class="nav-item"><a class="scrollto" href="#license">Regístrate</a></li>         
-                        <li class="nav-item"><a class="scrollto" href="#license">Ingresa</a></li>                       
+                        <li class="active nav-item sr-only"><a class="scrollto" href="#promo"><%= link_to "#promo", new_contact_path %></a></li>
+                        <li class="nav-item"><a class="scrollto"><%= link_to "Fundación", new_contact_path %></a></li>
+                        <li class="nav-item"><a class="scrollto"><%= link_to "Donantes", new_user_session_path %></a></li>
+                        <li class="nav-item"><a class="scrollto"><%= link_to "Nosotros", "#Nosotros" %></a></li>
+                        <li class="nav-item"><a class="scrollto"><%= link_to "Regístrate", "#registrate" %></a></li><!-- aca va el modal-->         
+                        <li class="nav-item"><a class="scrollto"><%= link_to "Ingresa", new_user_session_path %></a></li>                       
                         <!--<li class="nav-item last"><a class="scrollto" href="#contact">Contact</a></li>
                         <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Launch demo modal</button>-->
 
