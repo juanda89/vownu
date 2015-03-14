@@ -93,10 +93,14 @@ pre code {
 /* ======= Header ======= */
 .header {
   padding: 10px 0;
-  background: #17baef;
+  /*background: #17baef;*/
+  background-image: url("fondoprincipal.jpg");
   color: #fff;
   position: fixed;
   width: 100%;
+  font-family: 'Montserrat', sans-serif;
+
+
 }
 .header.navbar-fixed-top {
   background: #fff;
@@ -153,12 +157,12 @@ pre code {
   background: none;
 }
 .header .main-nav .nav .nav-item a {
-  color: #0a7396;
+  color: #ffffff;
   -webkit-transition: none;
   -moz-transition: none;
   -ms-transition: none;
   -o-transition: none;
-  font-size: 14px;
+  font-size: 22px;
   padding: 15px 10px;
 }
 .header .main-nav .nav .nav-item a:hover {
@@ -182,9 +186,11 @@ pre code {
 /* ======= Promo Section ======= */
 .promo {
   /*background: #17baef;*/
-  background-image: url(http://s6.postimg.org/63zf2nzqp/fondogeneral.jpg);
+  /*Caja que contiente el primer slide/vista del landing page */
+  background-image: url("fondoprincipal.jpg");
   color: #fff;
-  padding-top: 490px;
+  padding-top: 150px;
+  height: 980px;
 }
 .promo .title {
   font-size: 98px;

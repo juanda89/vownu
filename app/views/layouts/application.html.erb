@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <!-- Google Fonts API Tangerine y Montserrat -->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
 </head>
 <body data-spy="scroll">
     
@@ -38,7 +43,7 @@
                     </button><!--//nav-toggle-->
                 </div><!--//navbar-header-->            
                 <div class="navbar-collapse collapse" id="navbar-collapse">
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav" id="palabrassuperiores">
                         <li class="active nav-item sr-only"><a class="scrollto" href="#promo"><%= link_to "#promo", new_contact_path %></a></li>
                         <li class="nav-item"><a class="scrollto"><%= link_to "Fundación", new_contact_path %></a></li>
                         <li class="nav-item"><a class="scrollto"><%= link_to "Donantes", new_user_session_path %></a></li>
