@@ -617,6 +617,13 @@ pre code {
   .contact .social-icons a .fa:before {
     font-size: 18px;
   }
+
+  #botonformulariotweet{
+
+   left: 50%;
+   top:40%;
+
+  }
 }
 /* Small devices (tablets, 768px and up) */
 /* Medium devices (desktops, 992px and up) */

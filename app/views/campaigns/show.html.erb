@@ -35,7 +35,7 @@
   <%= @campaign.status_campaign %>
 </p>
 
-<% if !current_user.nil? %>
+<% if !current_user.nil? %<!--este es el boton de tweet -->
     <p>Click The link below to send a tweet.</p>
     <%= link_to "Send a Tweet", new_tweet_path %>
 <% else %>
