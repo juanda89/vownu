@@ -7,7 +7,17 @@ class User < ActiveRecord::Base
 	
 	has_many :user_provider, :dependent => :destroy
 
-
+ def tweet(tweet)
+    client = Twitter::REST::Client.new do |config|
+      config.consumer_key        = "v6SUG2SjQXKaeC5iVJ4SdXydD"
+      config.consumer_secret     = "iPq0SNso63vSRPPLQVstKa4z1Dx7jCYqyIr3uWs22Y3ILZNNdE"
+      config.access_token        = oauth_token
+      config.access_token_secret = oauth_secret
+    end
+    
+    client.update(tweet)
+  end
+end
 #def self.from_omniauth(auth)
 #      where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
 #        user.provider = auth.provider
@@ -18,6 +28,6 @@ class User < ActiveRecord::Base
 #  end
 
 
-end
+
 
 

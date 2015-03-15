@@ -18,7 +18,7 @@ class UserProvider < ActiveRecord::Base
                 registered_user
             else
                 user = User.create!(
-                    name: auth.info.name,
+                            name: auth.info.name,
                             email: auth.info.email,
                             password: Devise.friendly_token[0,20],
                             )
@@ -48,7 +48,7 @@ class UserProvider < ActiveRecord::Base
                           reach_out: auth.friends_count,
                           likes: auth.favourites_count,
                           token: auth.credentials.token,
-                           secret: auth.credentials.secret,
+                          secret: auth.credentials.secret,
                             
                               )
                    registered_user
@@ -59,6 +59,8 @@ class UserProvider < ActiveRecord::Base
                           password: Devise.friendly_token[0,20],
                           name: auth.info.name,
                           photo_url: auth.info.image,
+                          oauth_token: auth.credentials.token,
+                          oauth_secret: auth.credentials.secret,
                           )
 
                     user_provider = UserProvider.create!(
@@ -70,9 +72,7 @@ class UserProvider < ActiveRecord::Base
                           reach_out: auth.friends_count,
                           likes: auth.favourites_count,
                           token: auth.credentials.token,
-                           secret: auth.credentials.secret,
-                         
-                         
+                          secret: auth.credentials.secret
                         )
                     user
               end

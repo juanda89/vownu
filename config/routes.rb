@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'tweets/new'
+
+  get 'tweets/create'
+  resources :tweets, only: [:new, :create]
   #devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
   # devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks"}
   #devise_for :users, class_name: 'FormUser', controllers: { :omniauth_callbacks => "users/omniauth_callbacks"}

@@ -35,5 +35,12 @@
   <%= @campaign.status_campaign %>
 </p>
 
+<% if !current_user.nil? %>
+    <p>Click The link below to send a tweet.</p>
+    <%= link_to "Send a Tweet", new_tweet_path %>
+<% else %>
+    <p>You must log in to send a tweet.</p>
+<% end %>
+
 <%= link_to 'Edit', edit_campaign_path(@campaign) %> |
 <%= link_to 'Back', campaigns_path %>
