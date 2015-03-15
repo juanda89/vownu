@@ -187,10 +187,10 @@ pre code {
 .promo {
   /*background: #17baef;*/
   /*Caja que contiente el primer slide/vista del landing page */
-  background-image: url("http://i724.photobucket.com/albums/ww243/Duckyboy1989/fondogeneral-1_zpsly8nczqr.jpg");
-  color: #fff;
+  /*background-image: url("http://i724.photobucket.com/albums/ww243/Duckyboy1989/fondogeneral-1_zpsly8nczqr.jpg");*/
+  background-color: #BCF5A9;
   padding-top: 150px;
-  height: 980px;
+  height: 1980px;
 }
 .promo .title {
   font-size: 98px;
