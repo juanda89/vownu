@@ -23,7 +23,8 @@ module VowNu
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
     config.assets.initialize_on_precompile = false
-
+    config.assets.precompile += %w( *.js *.css )
+    
     config.action_dispatch.default_headers = {
         'X-Frame-Options' => 'ALLOWALL'
     }
