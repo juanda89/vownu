@@ -183,10 +183,12 @@ pre code {
 .header .main-nav .nav .nav-item.last {
   margin-right: 0;
 }
+
 /* ======= Promo Section ======= */
 .promo {
   /*background: #17baef;*/
-  /*Caja que contiente el primer slide/vista del landing page */
+  /*Caja que contiene el primer slide/vista del landing page */
+  /*Esta Caja SÍ*/
   background-image: url("fondoprincipal.jpg");
   color: #fff;
   padding-top: 150px;
@@ -240,8 +242,11 @@ pre code {
 }
 /* ======= About Section ======= */
 .about {
+  /*Esta Caja SÍ*/
+  /*Caja que contiene al segundo slide/vista  */
   padding: 80px 0;
-  background: #f5f5f5;
+  /*background: #f5f5f5;*/
+  background-image: url("slidevow2.jpg");
 }
 .about .title {
   color: #074f66;
@@ -275,10 +280,13 @@ pre code {
   font-size: 18px;
 }
 /* ======= Features Section ======= */
+
 .features {
+  /*Este hace referencia a la caja div de la vista de Features */
+
   padding: 80px 0;
   background: #17baef;
-  color: #fff;
+  color: #000;
 }
 .features .title {
   color: #074f66;
