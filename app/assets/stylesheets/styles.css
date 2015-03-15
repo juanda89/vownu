@@ -187,7 +187,7 @@ pre code {
 .promo {
   /*background: #17baef;*/
   /*Caja que contiente el primer slide/vista del landing page */
-  background-image: image-url("fondoprincipal.jpg");
+  background-image: url("fondoprincipal.jpg");
   color: #fff;
   padding-top: 150px;
   height: 980px;
