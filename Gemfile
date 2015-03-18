@@ -43,7 +43,7 @@ end
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'bootstrap-sass'
+# gem 'bootstrap-sass'
 gem 'mail_form'
 gem 'simple_form'
 gem 'dotenv-rails', :groups => [:development, :test]
