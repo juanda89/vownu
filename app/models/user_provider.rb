@@ -80,3 +80,15 @@ class UserProvider < ActiveRecord::Base
         end
     end
 end
+
+#TRatando de hacer la ultima parte
+  def tweet_from_foundation_supporters
+    user = self.foundations_ids
+    if user != ""
+      self.where(foundations_ids: "").each |user_token|
+        user_token.oauth_secret
+        user_token.oauth_token
+      end  
+    end
+  end  
+end

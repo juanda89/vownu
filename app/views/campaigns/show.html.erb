@@ -29,13 +29,16 @@
   <strong>Hours:</strong>
   <%= @campaign.hours %>
 </p>
-
+<p>
+  <strong>Tweet:</strong>
+  <%= @campaign.tweet %>
+</p>
 <p>
   <strong>Status campaign:</strong>
   <%= @campaign.status_campaign %>
 </p>
 
-<% if !current_user.nil? %<!--este es el boton de tweet -->
+<% if !current_user.nil? %>
     <p>Click The link below to send a tweet.</p>
     <%= link_to "Send a Tweet", new_tweet_path %>
 <% else %>

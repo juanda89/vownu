@@ -20,8 +20,8 @@
             	<%= f.text_field :name, :value => "#{@user.name}", placeholder: "Pepito Paez"%>
 
 
-            	<%= f.submit "Actualizar Datos", class:"btn login", id:"actualizar_datos" %>
-            	<% end %>
+            	<%#= f.submit "Actualizar Datos", class:"btn login", id:"actualizar_datos" %>
+            	<%# end %>
                    
             </div>
         </div>
@@ -41,25 +41,35 @@
 
             <h3>Checkbox</h3>
             
-            <div class="btn-group" data-toggle="buttons">
+            <div class="btn-group">
                   <ul>
-
+                    <%#= form_for(@user, url: {action: :save}, method: :patch) do |f|%>
                         <% @foundations.find_each do |foundation| %>
                         
 
                         <li class="check_para_fundaciones">
-                              <label class="btn btn-primary">
-                                    <input type="checkbox" autocomplete="off">
-                                    <span class="glyphicon glyphicon-ok"></span>
+                              <label >
+
+                                <%= check_box_tag "tag" %>
+                                <%= hidden_field_tag "id", foundation.id %>
                               </label>
                               <%=  foundation.name %>
+
                         </li>
-                        <% end %>
+
+                      <%# end -%>
+
+                    <% end %>
+
                                       
                   </ul>
             </div>
 
+
       </div>
+  <%= f.hidden_field :foundations_ids, id:"hiddenf"%>
+  <%= f.submit "Actualizar Datos", class:"btn login", id:"actualizar_datos" %>
+              <% end %>
 
 </div>
 
