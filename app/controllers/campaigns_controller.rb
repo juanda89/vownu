@@ -38,6 +38,10 @@ class CampaignsController < ApplicationController
     end
   end
 
+
+
+
+
   # PATCH/PUT /campaigns/1
   # PATCH/PUT /campaigns/1.json
   def update
@@ -70,6 +74,6 @@ class CampaignsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def campaign_params
-      params.require(:campaign).permit(:id, :name, :date_start, :date_end, :days, :hours, :status_campaign)
+      params.require(:campaign).permit(:id, :name, :date_start, :date_end, :days, :hours, :tweet, :status_campaign)
     end
 end

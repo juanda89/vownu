@@ -39,6 +39,15 @@
     <%= f.label :status_campaign %><br>
     <%= f.text_field :status_campaign %>
   </div>
+  <div class="field">
+    <%= f.label :tweet %><br>
+    <%= f.text_area :tweet %>
+  </div>
+  <div class="field">
+    <%= f.label :fundación %><br>
+    <%= select_tag :fundacion, options_from_collection_for_select(User.where(is_foundation: 'true'), 'id', 'name')%>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

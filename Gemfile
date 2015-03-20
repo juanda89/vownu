@@ -35,6 +35,8 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 end
 
+#Para agendar y postear los tweets con delay D
+gem 'sidekiq'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
