@@ -7,7 +7,7 @@ $(function(){
         var a = "";
 
         $('.check_para_fundaciones :checked').each(function() { //loop through each checkbox
-            a = a +";"+ $(this).next().val();  //select all checkboxes with class "checkbox1"
+            a = $(this).next().val() +";"+ a ;  //select all checkboxes with class "checkbox1"
         });
 
         $("#hiddenf").val(a);
