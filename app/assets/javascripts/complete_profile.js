@@ -3,7 +3,7 @@
  */
 $(function(){
 
-    $("#edit_user_4").submit(function(e){
+    $(".edit_user").submit(function(e){
         var a = "";
 
         $('.check_para_fundaciones :checked').each(function() { //loop through each checkbox
